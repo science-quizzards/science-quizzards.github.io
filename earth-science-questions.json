@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "Which resource is renewable?",
+    "options": ["coal", "diamonds", "silver", "wind"],
+    "answer": "wind",
+    "explanation": "Wind is a renewable resource because it is naturally replenished and not depleted when used, unlike fossil fuels such as coal, diamonds, and silver."
+  },
+  {
+    "id": 2,
+    "question": "What is the main source of energy for Earth?",
+    "options": ["moon", "sun", "wind", "water"],
+    "answer": "sun",
+    "explanation": "The sun provides heat and light that drive Earth's weather, water cycle, and plant growth, making it the main energy source."
+  },
+  {
+    "id": 3,
+    "question": "Which layer of Earth do we live on?",
+    "options": ["core", "mantle", "crust", "atmosphere"],
+    "answer": "crust",
+    "explanation": "The crust is the thin, solid outer layer of Earth where we live, including land and ocean floors."
+  },
+  {
+    "id": 4,
+    "question": "What causes day and night?",
+    "options": ["Earth’s rotation", "Earth’s orbit", "Sun’s movement", "Moon’s phases"],
+    "answer": "Earth’s rotation",
+    "explanation": "Earth’s rotation on its axis every 24 hours causes day when we face the sun and night when we face away."
+  },
+  {
+    "id": 5,
+    "question": "Which of these is a type of rock?",
+    "options": ["sand", "igneous", "soil", "water"],
+    "answer": "igneous",
+    "explanation": "Igneous rocks form from cooled magma or lava, while sand and soil are made of tiny rock pieces, and water is a liquid."
+  },
+  {
+    "id": 6,
+    "question": "What is the process of water turning into vapor called?",
+    "options": ["condensation", "evaporation", "precipitation", "freezing"],
+    "answer": "evaporation",
+    "explanation": "Evaporation happens when water heats up and turns into vapor, rising into the air."
+  },
+  {
+    "id": 7,
+    "question": "Which is a form of precipitation?",
+    "options": ["wind", "rain", "sunlight", "clouds"],
+    "answer": "rain",
+    "explanation": "Rain is water falling from clouds, which is a type of precipitation, unlike wind or sunlight."
+  },
+  {
+    "id": 8,
+    "question": "What is the center of Earth called?",
+    "options": ["crust", "mantle", "core", "surface"],
+    "answer": "core",
+    "explanation": "The core is the hot, dense center of Earth, made of metal like iron and nickel."
+  },
+  {
+    "id": 9,
+    "question": "Which of these is a fossil fuel?",
+    "options": ["wind", "coal", "water", "sunlight"],
+    "answer": "coal",
+    "explanation": "Coal is a fossil fuel formed from ancient plants over millions of years, unlike wind, water, or sunlight."
+  },
+  {
+    "id": 10,
+    "question": "What do we call the pattern of weather over a long time?",
+    "options": ["climate", "season", "forecast", "temperature"],
+    "answer": "climate",
+    "explanation": "Climate is the average weather in a place over many years, like a desert being dry and hot."
+  },
+  {
+    "id": 11,
+    "question": "Which of these is a natural resource?",
+    "options": ["plastic", "glass", "water", "concrete"],
+    "answer": "water",
+    "explanation": "Water is a natural resource found in nature, while plastic, glass, and concrete are man-made."
+  },
+  {
+    "id": 12,
+    "question": "What causes the seasons?",
+    "options": ["Earth’s tilt", "Sun’s heat", "Moon’s gravity", "Wind patterns"],
+    "answer": "Earth’s tilt",
+    "explanation": "Earth’s tilt as it orbits the sun changes how sunlight hits us, creating seasons like summer and winter."
+  },
+  {
+    "id": 13,
+    "question": "Which rock type forms from layers of sediment?",
+    "options": ["igneous", "metamorphic", "sedimentary", "volcanic"],
+    "answer": "sedimentary",
+    "explanation": "Sedimentary rocks form when sand, mud, or shells pile up and harden over time."
+  },
+  {
+    "id": 14,
+    "question": "What is the outermost layer of Earth’s atmosphere?",
+    "options": ["troposphere", "stratosphere", "mesosphere", "exosphere"],
+    "answer": "exosphere",
+    "explanation": "The exosphere is the farthest layer of Earth’s atmosphere, where air is very thin and space begins."
+  },
+  {
+    "id": 15,
+    "question": "Which of these is a tool to measure temperature?",
+    "options": ["ruler", "thermometer", "clock", "compass"],
+    "answer": "thermometer",
+    "explanation": "A thermometer measures how hot or cold something is, like the air outside."
+  },
+  {
+    "id": 16,
+    "question": "What gas do plants need to make food?",
+    "options": ["oxygen", "nitrogen", "carbon dioxide", "helium"],
+    "answer": "carbon dioxide",
+    "explanation": "Plants use carbon dioxide from the air, sunlight, and water to make their food in photosynthesis."
+  },
+  {
+    "id": 17,
+    "question": "Which of these is a type of erosion?",
+    "options": ["wind blowing soil away", "planting trees", "building a dam", "making a road"],
+    "answer": "wind blowing soil away",
+    "explanation": "Erosion is when wind, water, or ice move soil or rock, like wind blowing soil away."
+  },
+  {
+    "id": 18,
+    "question": "What is the solid form of water?",
+    "options": ["steam", "ice", "rain", "vapor"],
+    "answer": "ice",
+    "explanation": "Ice is water that has frozen into a solid when it gets cold enough."
+  },
+  {
+    "id": 19,
+    "question": "Which planet is closest to the sun?",
+    "options": ["Earth", "Mars", "Mercury", "Venus"],
+    "answer": "Mercury",
+    "explanation": "Mercury is the closest planet to the sun, making it very hot during the day."
+  },
+  {
+    "id": 20,
+    "question": "What do we call a scientist who studies rocks?",
+    "options": ["biologist", "geologist", "astronomer", "chemist"],
+    "answer": "geologist",
+    "explanation": "A geologist studies rocks, minerals, and Earth’s structure to learn about its history."
+  },
+  {
+    "id": 21,
+    "question": "Which of these is a renewable energy source?",
+    "options": ["coal", "oil", "solar", "natural gas"],
+    "answer": "solar",
+    "explanation": "Solar energy comes from the sun, which won’t run out, unlike coal, oil, or natural gas."
+  },
+  {
+    "id": 22,
+    "question": "What is the process of rocks breaking down into smaller pieces?",
+    "options": ["weathering", "melting", "freezing", "burning"],
+    "answer": "weathering",
+    "explanation": "Weathering is when rocks break apart into smaller pieces due to wind, water, or ice."
+  },
+  {
+    "id": 23,
+    "question": "Which layer of Earth is liquid?",
+    "options": ["crust", "outer core", "inner core", "mantle"],
+    "answer": "outer core",
+    "explanation": "The outer core is a hot, liquid layer of metal surrounding the solid inner core."
+  },
+  {
+    "id": 24,
+    "question": "What do we call water that falls from clouds?",
+    "options": ["evaporation", "precipitation", "condensation", "runoff"],
+    "answer": "precipitation",
+    "explanation": "Precipitation is water falling from clouds as rain, snow, sleet, or hail."
+  },
+  {
+    "id": 25,
+    "question": "Which of these is a type of cloud?",
+    "options": ["cumulus", "tornado", "hurricane", "fog"],
+    "answer": "cumulus",
+    "explanation": "Cumulus clouds are puffy and white, while tornadoes and hurricanes are weather events, and fog is near the ground."
+  },
+  {
+    "id": 26,
+    "question": "What causes a volcano to erupt?",
+    "options": ["wind", "magma pressure", "rain", "earthquakes"],
+    "answer": "magma pressure",
+    "explanation": "Magma pressure builds up underground and forces its way out, causing a volcano to erupt."
+  },
+  {
+    "id": 27,
+    "question": "Which of these is a mineral?",
+    "options": ["sand", "quartz", "soil", "wood"],
+    "answer": "quartz",
+    "explanation": "Quartz is a hard, natural mineral found in rocks, while sand and soil are mixtures, and wood comes from plants."
+  }, 
+  {
+    "id": 28,
+    "question": "What is the largest ocean on Earth?",
+    "options": ["Atlantic", "Indian", "Pacific", "Arctic"],
+    "answer": "Pacific",
+    "explanation": "The Pacific Ocean is the biggest ocean, covering more area than all the land on Earth combined."
+  },
+  {
+    "id": 29,
+    "question": "Which of these helps prevent soil erosion?",
+    "options": ["cutting trees", "planting grass", "building roads", "digging holes"],
+    "answer": "planting grass",
+    "explanation": "Grass roots hold soil in place, stopping wind and water from washing it away."
+  },
+  {
+    "id": 30,
+    "question": "What is the movement of water through Earth’s systems called?",
+    "options": ["rock cycle", "water cycle", "weather cycle", "energy cycle"],
+    "answer": "water cycle",
+    "explanation": "The water cycle is how water moves through evaporation, condensation, precipitation, and runoff."
+  },
+  {
+    "id": 31,
+    "question": "Which of these is a type of severe weather?",
+    "options": ["sunny day", "tornado", "light breeze", "cloudy sky"],
+    "answer": "tornado",
+    "explanation": "A tornado is a dangerous spinning windstorm, unlike a sunny day or light breeze."
+  },
+  {
+    "id": 32,
+    "question": "What do we call the shaking of Earth’s surface?",
+    "options": ["volcano", "earthquake", "tsunami", "hurricane"],
+    "answer": "earthquake",
+    "explanation": "An earthquake is when Earth’s crust shakes due to movement underground."
+  },
+  {
+    "id": 33,
+    "question": "Which of these is made from dead plants and animals over millions of years?",
+    "options": ["water", "oil", "wind", "sand"],
+    "answer": "oil",
+    "explanation": "Oil is a fossil fuel formed from ancient plants and animals buried long ago."
+  },
+  {
+    "id": 34,
+    "question": "What is the layer of gases around Earth called?",
+    "options": ["crust", "mantle", "atmosphere", "core"],
+    "answer": "atmosphere",
+    "explanation": "The atmosphere is the blanket of air around Earth that we breathe and that protects us."
+  },
+  {
+    "id": 35,
+    "question": "Which of these is a tool to measure wind speed?",
+    "options": ["thermometer", "anemometer", "barometer", "ruler"],
+    "answer": "anemometer",
+    "explanation": "An anemometer spins to measure how fast the wind is blowing."
+  },
+  {
+    "id": 36,
+    "question": "What type of rock forms from heat and pressure?",
+    "options": ["igneous", "sedimentary", "metamorphic", "fossil"],
+    "answer": "metamorphic",
+    "explanation": "Metamorphic rocks form when existing rocks change due to heat and pressure deep underground."
+  },
+  {
+    "id": 37,
+    "question": "Which of these is a source of fresh water?",
+    "options": ["ocean", "river", "sea", "salt lake"],
+    "answer": "river",
+    "explanation": "Rivers have fresh water we can drink, unlike oceans and seas which are salty."
+  },
+  {
+    "id": 38,
+    "question": "What do we call the path Earth takes around the sun?",
+    "options": ["rotation", "orbit", "tilt", "spin"],
+    "answer": "orbit",
+    "explanation": "Earth’s orbit is its year-long trip around the sun, which causes the seasons."
+  },
+  {
+    "id": 39,
+    "question": "Which of these is a way to conserve water?",
+    "options": ["leaving the tap on", "taking long showers", "fixing leaks", "watering plants all day"],
+    "answer": "fixing leaks",
+    "explanation": "Fixing leaks stops water from being wasted, helping us save it."
+  },
+  {
+    "id": 40,
+    "question": "What is the main gas in Earth’s atmosphere?",
+    "options": ["oxygen", "nitrogen", "carbon dioxide", "helium"],
+    "answer": "nitrogen",
+    "explanation": "Nitrogen makes up most of the air we breathe, about 78% of the atmosphere."
+  },
+  {
+    "id": 41,
+    "question": "Which of these is a landform?",
+    "options": ["cloud", "mountain", "rain", "wind"],
+    "answer": "mountain",
+    "explanation": "A mountain is a natural feature of Earth’s surface, unlike clouds or wind."
+  },
+  {
+    "id": 42,
+    "question": "What do we call melted rock inside Earth?",
+    "options": ["lava", "magma", "sand", "gravel"],
+    "answer": "magma",
+    "explanation": "Magma is melted rock inside Earth; when it comes out, it’s called lava."
+  },
+  {
+    "id": 43,
+    "question": "Which of these animals helps break down dead plants?",
+    "options": ["eagle", "worm", "bear", "fish"],
+    "answer": "worm",
+    "explanation": "Worms eat dead plants and turn them into soil, helping nature recycle."
+  },
+  {
+    "id": 44,
+    "question": "What causes tides in the ocean?",
+    "options": ["wind", "sun", "moon’s gravity", "rain"],
+    "answer": "moon’s gravity",
+    "explanation": "The moon’s gravity pulls on Earth’s water, causing high and low tides."
+  },
+  {
+    "id": 45,
+    "question": "Which of these is a way rocks can move?",
+    "options": ["flying", "erosion", "growing", "melting"],
+    "answer": "erosion",
+    "explanation": "Erosion moves rocks when wind, water, or ice carry them away."
+  },
+  {
+    "id": 46,
+    "question": "What is the bright, fiery object in the sky during the day?",
+    "options": ["moon", "star", "sun", "cloud"],
+    "answer": "sun",
+    "explanation": "The sun is a star that lights and warms Earth during the day."
+  },
+  {
+    "id": 47,
+    "question": "Which of these is a type of soil?",
+    "options": ["clay", "rock", "water", "air"],
+    "answer": "clay",
+    "explanation": "Clay is a type of soil that’s sticky and holds water, unlike rock or air."
+  },
+  {
+    "id": 48,
+    "question": "What do we call a crack in Earth’s crust where plates move?",
+    "options": ["fault", "valley", "river", "hill"],
+    "answer": "fault",
+    "explanation": "A fault is a break in Earth’s crust where movement can cause earthquakes."
+  },
+  {
+    "id": 49,
+    "question": "Which of these is a sign of a cold front?",
+    "options": ["warm air", "rain or snow", "clear skies", "hot weather"],
+    "answer": "rain or snow",
+    "explanation": "A cold front brings cooler air and often rain or snow as it pushes warm air up."
+  },
+  {
+    "id": 50,
+    "question": "What do plants release into the air?",
+    "options": ["carbon dioxide", "oxygen", "nitrogen", "dust"],
+    "answer": "oxygen",
+    "explanation": "Plants make oxygen during photosynthesis, which we breathe to stay alive."
+  },
+  {
+    "id": 51,
+    "question": "Which of these is a renewable resource?",
+    "options": ["coal", "trees", "oil", "gold"],
+    "answer": "trees",
+    "explanation": "Trees can grow back if we plant new ones, making them renewable, unlike coal or oil."
+  },
+  {
+    "id": 52,
+    "question": "What do we call the study of weather?",
+    "options": ["geology", "meteorology", "biology", "astronomy"],
+    "answer": "meteorology",
+    "explanation": "Meteorology is the science of weather, like predicting rain or storms."
+  },
+  {
+    "id": 53,
+    "question": "Which of these is a fossil?",
+    "options": ["living fish", "rock", "dinosaur bone", "sand"],
+    "answer": "dinosaur bone",
+    "explanation": "A fossil is the remains of an ancient living thing, like a dinosaur bone preserved in rock."
+  },
+  {
+    "id": 54,
+    "question": "What is the process of water vapor turning back into liquid?",
+    "options": ["evaporation", "condensation", "precipitation", "melting"],
+    "answer": "condensation",
+    "explanation": "Condensation is when water vapor cools and turns into liquid, like dew on grass."
+  },
+  {
+    "id": 55,
+    "question": "Which of these is a natural disaster?",
+    "options": ["picnic", "flood", "party", "game"],
+    "answer": "flood",
+    "explanation": "A flood is a natural disaster when too much water covers land, causing damage."
+  },
+  {
+    "id": 56,
+    "question": "What do we call the wearing away of Earth’s surface?",
+    "options": ["erosion", "volcano", "weather", "orbit"],
+    "answer": "erosion",
+    "explanation": "Erosion is when wind, water, or ice wear away soil and rock over time."
+  },
+  {
+    "id": 57,
+    "question": "Which of these is a planet?",
+    "options": ["sun", "moon", "Earth", "star"],
+    "answer": "Earth",
+    "explanation": "Earth is a planet that orbits the sun, unlike the moon, which is a satellite."
+  },
+  {
+    "id": 58,
+    "question": "What do we call a large sheet of moving ice?",
+    "options": ["river", "glacier", "lake", "cloud"],
+    "answer": "glacier",
+    "explanation": "A glacier is a huge mass of ice that moves slowly over land."
+  },
+  {
+    "id": 59,
+    "question": "Which of these helps plants grow?",
+    "options": ["darkness", "sunlight", "ice", "sand"],
+    "answer": "sunlight",
+    "explanation": "Sunlight gives plants energy to make food through photosynthesis."
+  },
+  {
+    "id": 60,
+    "question": "What is the hard outer layer of Earth made of?",
+    "options": ["water", "rock", "air", "sand"],
+    "answer": "rock",
+    "explanation": "Earth’s crust, the outer layer, is made of solid rock like granite and basalt."
+  },
+  {
+    "id": 61,
+    "question": "Which of these is a type of energy from Earth?",
+    "options": ["solar", "geothermal", "wind", "nuclear"],
+    "answer": "geothermal",
+    "explanation": "Geothermal energy comes from heat inside Earth, like from hot springs."
+  },
+  {
+    "id": 62,
+    "question": "What do we call the spinning of Earth?",
+    "options": ["orbit", "rotation", "tilt", "revolution"],
+    "answer": "rotation",
+    "explanation": "Rotation is Earth spinning on its axis, causing day and night."
+  },
+  {
+    "id": 63,
+    "question": "Which of these is a tool to measure air pressure?",
+    "options": ["thermometer", "barometer", "anemometer", "ruler"],
+    "answer": "barometer",
+    "explanation": "A barometer measures air pressure, which helps predict weather changes."
+  },
+  {
+    "id": 64,
+    "question": "What do we call the remains of ancient plants and animals in rock?",
+    "options": ["minerals", "fossils", "sediments", "gems"],
+    "answer": "fossils",
+    "explanation": "Fossils are traces or remains of living things preserved in rock, like dinosaur bones."
+  },
+  {
+    "id": 65,
+    "question": "Which of these is a renewable resource?",
+    "options": ["oil", "coal", "water", "natural gas"],
+    "answer": "water",
+    "explanation": "Water is renewable because it cycles through nature and can be reused."
+  },
+  {
+    "id": 66,
+    "question": "What is the name of the closest star to Earth?",
+    "options": ["Moon", "Sun", "Mars", "Venus"],
+    "answer": "Sun",
+    "explanation": "The Sun is the closest star to Earth, providing light and heat every day."
+  },
+  {
+    "id": 67,
+    "question": "Which of these is a way to save energy?",
+    "options": ["leaving lights on", "turning off fans", "using more heat", "driving everywhere"],
+    "answer": "turning off fans",
+    "explanation": "Turning off fans when not needed saves energy, unlike leaving things running."
+  },
+  {
+    "id": 68,
+    "question": "What do we call a sudden flow of mud down a hill?",
+    "options": ["flood", "landslide", "tornado", "earthquake"],
+    "answer": "landslide",
+    "explanation": "A landslide is when mud, rocks, or soil slide down a slope, often after rain."
+  },
+  {
+    "id": 69,
+    "question": "Which of these is a layer of Earth?",
+    "options": ["ocean", "mantle", "cloud", "wind"],
+    "answer": "mantle",
+    "explanation": "The mantle is a thick layer of hot rock beneath Earth’s crust."
+  },
+  {
+    "id": 70,
+    "question": "What do we call water that flows over land after rain?",
+    "options": ["runoff", "evaporation", "condensation", "precipitation"],
+    "answer": "runoff",
+    "explanation": "Runoff is water that flows over the ground into rivers or lakes after it rains."
+  },
+  {
+    "id": 71,
+    "question": "Which of these is a type of precipitation?",
+    "options": ["fog", "snow", "wind", "sunlight"],
+    "answer": "snow",
+    "explanation": "Snow is frozen water falling from clouds, a type of precipitation."
+  },
+  {
+    "id": 72,
+    "question": "What is the main cause of Earth’s heat inside?",
+    "options": ["sun", "core", "wind", "water"],
+    "answer": "core",
+    "explanation": "Earth’s core is very hot and heats the planet from the inside."
+  },
+  {
+    "id": 73,
+    "question": "Which of these is a type of igneous rock?",
+    "options": ["sandstone", "granite", "limestone", "marble"],
+    "answer": "granite",
+    "explanation": "Granite is an igneous rock formed from cooled magma or lava."
+  },
+  {
+    "id": 74,
+    "question": "What do we call a scientist who studies earthquakes?",
+    "options": ["meteorologist", "seismologist", "biologist", "chemist"],
+    "answer": "seismologist",
+    "explanation": "A seismologist studies earthquakes and how Earth’s crust moves."
+  },
+  {
+    "id": 75,
+    "question": "Which of these is a renewable energy source?",
+    "options": ["coal", "wind", "oil", "gasoline"],
+    "answer": "wind",
+    "explanation": "Wind is renewable because it keeps blowing and doesn’t run out."
+  },
+  {
+    "id": 76,
+    "question": "What do we call the boundary between land and ocean?",
+    "options": ["mountain", "coast", "valley", "river"],
+    "answer": "coast",
+    "explanation": "The coast is where land meets the ocean, like a beach or cliff."
+  },
+  {
+    "id": 77,
+    "question": "Which of these is a way animals help the Earth?",
+    "options": ["cutting trees", "polluting water", "spreading seeds", "building roads"],
+    "answer": "spreading seeds",
+    "explanation": "Animals like birds spread seeds, helping plants grow in new places."
+  },
+  {
+    "id": 78,
+    "question": "What is the liquid form of rock that comes out of a volcano?",
+    "options": ["magma", "lava", "water", "mud"],
+    "answer": "lava",
+    "explanation": "Lava is melted rock that flows out of a volcano; inside Earth, it’s called magma."
+  },
+  {
+    "id": 79,
+    "question": "Which of these is a tool to find direction?",
+    "options": ["compass", "thermometer", "clock", "ruler"],
+    "answer": "compass",
+    "explanation": "A compass shows directions like north and south, helping us find our way."
+  },
+  {
+    "id": 80,
+    "question": "What do we call the process of soil washing away?",
+    "options": ["weathering", "erosion", "melting", "freezing"],
+    "answer": "erosion",
+    "explanation": "Erosion is when soil or rock is moved by water, wind, or ice."
+  },
+  {
+    "id": 81,
+    "question": "Which of these is a gas in the air?",
+    "options": ["sand", "oxygen", "rock", "water"],
+    "answer": "oxygen",
+    "explanation": "Oxygen is a gas we breathe from the air, made by plants."
+  },
+  {
+    "id": 82,
+    "question": "What do we call a large body of saltwater?",
+    "options": ["lake", "river", "ocean", "pond"],
+    "answer": "ocean",
+    "explanation": "An ocean is a huge body of saltwater, covering most of Earth."
+  },
+  {
+    "id": 83,
+    "question": "Which of these is a way to reduce waste?",
+    "options": ["throwing things away", "recycling", "buying more", "leaving lights on"],
+    "answer": "recycling",
+    "explanation": "Recycling turns old things into new ones, reducing what goes to the trash."
+  },
+  {
+    "id": 84,
+    "question": "What do we call the shape of Earth?",
+    "options": ["flat", "cube", "sphere", "triangle"],
+    "answer": "sphere",
+    "explanation": "Earth is a round ball, or sphere, as seen from space."
+  },
+  {
+    "id": 85,
+    "question": "Which of these is a type of weather?",
+    "options": ["mountain", "fog", "river", "forest"],
+    "answer": "fog",
+    "explanation": "Fog is a type of weather where tiny water droplets make it hard to see."
+  },
+  {
+    "id": 86,
+    "question": "What do we call the force that pulls things toward Earth?",
+    "options": ["wind", "gravity", "heat", "light"],
+    "answer": "gravity",
+    "explanation": "Gravity is the force that keeps us on the ground and pulls objects down."
+  },
+  {
+    "id": 87,
+    "question": "Which of these is a sedimentary rock?",
+    "options": ["granite", "limestone", "marble", "basalt"],
+    "answer": "limestone",
+    "explanation": "Limestone is a sedimentary rock made from layers of shells and minerals."
+  },
+  {
+    "id": 88,
+    "question": "What do we call a scientist who studies the stars?",
+    "options": ["geologist", "astronomer", "meteorologist", "biologist"],
+    "answer": "astronomer",
+    "explanation": "An astronomer studies stars, planets, and space."
+  },
+  {
+    "id": 89,
+    "question": "Which of these is a nonrenewable resource?",
+    "options": ["wind", "coal", "water", "sunlight"],
+    "answer": "coal",
+    "explanation": "Coal is nonrenewable because it takes millions of years to form and will run out."
+  },
+  {
+    "id": 90,
+    "question": "What do we call the top layer of soil?",
+    "options": ["bedrock", "topsoil", "sand", "clay"],
+    "answer": "topsoil",
+    "explanation": "Topsoil is the upper layer where plants grow, full of nutrients."
+  },
+  {
+    "id": 91,
+    "question": "Which of these is a type of storm?",
+    "options": ["hurricane", "mountain", "river", "valley"],
+    "answer": "hurricane",
+    "explanation": "A hurricane is a strong storm with wind and rain, unlike landforms."
+  },
+  {
+    "id": 92,
+    "question": "What do we call the breaking apart of rocks by plants?",
+    "options": ["erosion", "weathering", "melting", "freezing"],
+    "answer": "weathering",
+    "explanation": "Weathering happens when plant roots break rocks into smaller pieces."
+  },
+  {
+    "id": 93,
+    "question": "Which of these is a renewable resource?",
+    "options": ["oil", "solar energy", "coal", "gold"],
+    "answer": "solar energy",
+    "explanation": "Solar energy comes from the sun, which keeps shining every day."
+  },
+  {
+    "id": 94,
+    "question": "What do we call the layer of Earth below the crust?",
+    "options": ["core", "mantle", "atmosphere", "ocean"],
+    "answer": "mantle",
+    "explanation": "The mantle is the thick layer of hot rock beneath the crust."
+  },
+  {
+    "id": 95,
+    "question": "Which of these is a form of water in the air?",
+    "options": ["sand", "vapor", "rock", "soil"],
+    "answer": "vapor",
+    "explanation": "Water vapor is water in gas form, floating in the air."
+  },
+  {
+    "id": 96,
+    "question": "What do we call a large wave caused by an earthquake?",
+    "options": ["tornado", "tsunami", "hurricane", "flood"],
+    "answer": "tsunami",
+    "explanation": "A tsunami is a giant ocean wave caused by an earthquake under the sea."
+  },
+  {
+    "id": 97,
+    "question": "Which of these is a way to protect Earth?",
+    "options": ["littering", "recycling", "cutting forests", "wasting water"],
+    "answer": "recycling",
+    "explanation": "Recycling helps keep Earth clean by reusing materials instead of throwing them away."
+  },
+  {
+    "id": 98,
+    "question": "What do we call the daily changes in the air?",
+    "options": ["climate", "weather", "season", "orbit"],
+    "answer": "weather",
+    "explanation": "Weather is the day-to-day changes like rain, sun, or wind."
+  },
+  {
+    "id": 99,
+    "question": "Which of these is a type of energy from water?",
+    "options": ["solar", "hydro", "wind", "geothermal"],
+    "answer": "hydro",
+    "explanation": "Hydro energy comes from moving water, like in rivers or dams."
+  },
+  {
+    "id": 100,
+    "question": "What do we call the natural home of an animal?",
+    "options": ["habitat", "weather", "rock", "cloud"],
+    "answer": "habitat",
+    "explanation": "A habitat is where an animal lives, like a forest or ocean, with what it needs to survive."
+  }
+]
