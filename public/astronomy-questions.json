@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "What is the closest star to Earth?",
+    "options": ["Moon", "Sun", "Mars", "Jupiter"],
+    "answer": "Sun",
+    "explanation": "The Sun is the closest star to Earth, giving us light and heat every day."
+  },
+  {
+    "id": 2,
+    "question": "Which planet is the biggest in our solar system?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Jupiter",
+    "explanation": "Jupiter is the largest planet, so big that over 1,000 Earths could fit inside it."
+  },
+  {
+    "id": 3,
+    "question": "What causes day and night on Earth?",
+    "options": ["Earth’s orbit", "Earth’s rotation", "Sun’s movement", "Moon’s gravity"],
+    "answer": "Earth’s rotation",
+    "explanation": "Earth spins, or rotates, once every 24 hours, making day when we face the Sun and night when we don’t."
+  },
+  {
+    "id": 4,
+    "question": "Which of these is a planet?",
+    "options": ["Sun", "Moon", "Earth", "Star"],
+    "answer": "Earth",
+    "explanation": "Earth is a planet that orbits the Sun, while the Moon is a satellite and the Sun is a star."
+  },
+  {
+    "id": 5,
+    "question": "What do we call a group of stars that makes a picture in the sky?",
+    "options": ["galaxy", "constellation", "planet", "nebula"],
+    "answer": "constellation",
+    "explanation": "A constellation is a pattern of stars, like the Big Dipper, that people named long ago."
+  },
+  {
+    "id": 6,
+    "question": "Which planet is closest to the Sun?",
+    "options": ["Venus", "Earth", "Mercury", "Mars"],
+    "answer": "Mercury",
+    "explanation": "Mercury is the closest planet to the Sun, making it very hot during the day."
+  },
+  {
+    "id": 7,
+    "question": "What is the Moon?",
+    "options": ["a star", "a planet", "a satellite", "a comet"],
+    "answer": "a satellite",
+    "explanation": "The Moon is a satellite that orbits Earth, not a star or planet."
+  },
+  {
+    "id": 8,
+    "question": "What causes the seasons on Earth?",
+    "options": ["Earth’s tilt", "Sun’s heat", "Moon’s orbit", "Earth’s speed"],
+    "answer": "Earth’s tilt",
+    "explanation": "Earth’s tilt as it orbits the Sun changes how sunlight hits us, creating seasons."
+  },
+  {
+    "id": 9,
+    "question": "Which of these is NOT a planet?",
+    "options": ["Mars", "Sun", "Saturn", "Venus"],
+    "answer": "Sun",
+    "explanation": "The Sun is a star that planets orbit around, not a planet itself."
+  },
+  {
+    "id": 10,
+    "question": "What do we call the path Earth takes around the Sun?",
+    "options": ["rotation", "orbit", "spin", "tilt"],
+    "answer": "orbit",
+    "explanation": "Earth’s orbit is its year-long trip around the Sun, taking about 365 days."
+  },
+  {
+    "id": 11,
+    "question": "Which planet has rings around it?",
+    "options": ["Earth", "Saturn", "Mercury", "Venus"],
+    "answer": "Saturn",
+    "explanation": "Saturn is famous for its beautiful rings made of ice and rock."
+  },
+  {
+    "id": 12,
+    "question": "What is the Sun made of?",
+    "options": ["rock", "gas", "ice", "water"],
+    "answer": "gas",
+    "explanation": "The Sun is a huge ball of hot gases, like hydrogen and helium, not solid rock."
+  },
+  {
+    "id": 13,
+    "question": "Which of these is a tool to look at stars?",
+    "options": ["microscope", "telescope", "binoculars", "magnifying glass"],
+    "answer": "telescope",
+    "explanation": "A telescope helps us see faraway stars and planets in the sky."
+  },
+  {
+    "id": 14,
+    "question": "What do we call a scientist who studies space?",
+    "options": ["geologist", "astronomer", "biologist", "chemist"],
+    "answer": "astronomer",
+    "explanation": "An astronomer studies stars, planets, and everything in space."
+  },
+  {
+    "id": 15,
+    "question": "Which planet do we live on?",
+    "options": ["Mars", "Venus", "Earth", "Jupiter"],
+    "answer": "Earth",
+    "explanation": "Earth is our home planet, the only one known to have life."
+  },
+  {
+    "id": 16,
+    "question": "What is the name of our galaxy?",
+    "options": ["Andromeda", "Milky Way", "Solar System", "Orion"],
+    "answer": "Milky Way",
+    "explanation": "The Milky Way is our galaxy, a big group of stars that includes our Sun."
+  },
+  {
+    "id": 17,
+    "question": "Which of these is a small, rocky object orbiting the Sun?",
+    "options": ["star", "asteroid", "comet", "moon"],
+    "answer": "asteroid",
+    "explanation": "Asteroids are rocky objects that orbit the Sun, mostly between Mars and Jupiter."
+  },
+  {
+    "id": 18,
+    "question": "What causes the Moon to change shape in the sky?",
+    "options": ["clouds", "Earth’s shadow", "Sun’s light", "Moon’s rotation"],
+    "answer": "Sun’s light",
+    "explanation": "The Moon’s phases change because of how the Sun’s light hits it as it orbits Earth."
+  },
+  {
+    "id": 19,
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Mars", "Venus", "Jupiter", "Mercury"],
+    "answer": "Mars",
+    "explanation": "Mars looks red because of rusty iron in its soil."
+  },
+  {
+    "id": 20,
+    "question": "What do we call a ball of ice and dust with a tail in space?",
+    "options": ["asteroid", "comet", "planet", "star"],
+    "answer": "comet",
+    "explanation": "A comet is a ball of ice and dust that gets a tail when it nears the Sun."
+  },
+  {
+    "id": 21,
+    "question": "How long does it take Earth to orbit the Sun?",
+    "options": ["1 day", "1 month", "1 year", "1 hour"],
+    "answer": "1 year",
+    "explanation": "Earth takes about 365 days, or 1 year, to go around the Sun once."
+  },
+  {
+    "id": 22,
+    "question": "Which of these is a star?",
+    "options": ["Moon", "Sun", "Earth", "Mars"],
+    "answer": "Sun",
+    "explanation": "The Sun is a star that shines by making its own light, unlike planets or moons."
+  },
+  {
+    "id": 23,
+    "question": "What pulls the Moon to stay near Earth?",
+    "options": ["wind", "gravity", "light", "heat"],
+    "answer": "gravity",
+    "explanation": "Gravity is the force that keeps the Moon orbiting Earth."
+  },
+  {
+    "id": 24,
+    "question": "Which planet is the smallest?",
+    "options": ["Earth", "Mercury", "Mars", "Venus"],
+    "answer": "Mercury",
+    "explanation": "Mercury is the smallest planet, even smaller than some moons."
+  },
+  {
+    "id": 25,
+    "question": "What do we call the time when the Moon blocks the Sun?",
+    "options": ["lunar eclipse", "solar eclipse", "full moon", "new moon"],
+    "answer": "solar eclipse",
+    "explanation": "A solar eclipse happens when the Moon covers the Sun, making it dark for a short time."
+  },
+  {
+    "id": 26,
+    "question": "Which of these is NOT in our solar system?",
+    "options": ["Mars", "Sun", "Milky Way", "Jupiter"],
+    "answer": "Milky Way",
+    "explanation": "The Milky Way is our galaxy, while the others are part of our solar system."
+  },
+  {
+    "id": 27,
+    "question": "What is the bright streak of light from a rock burning in the sky?",
+    "options": ["comet", "meteor", "star", "planet"],
+    "answer": "meteor",
+    "explanation": "A meteor is a rock that burns up as it enters Earth’s air, making a streak of light."
+  },
+  {
+    "id": 28,
+    "question": "Which planet has the most moons?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Jupiter",
+    "explanation": "Jupiter has over 80 moons, more than any other planet."
+  },
+  {
+    "id": 29,
+    "question": "What do we call the spinning of Earth?",
+    "options": ["orbit", "rotation", "revolution", "tilt"],
+    "answer": "rotation",
+    "explanation": "Rotation is Earth spinning on its axis, causing day and night."
+  },
+  {
+    "id": 30,
+    "question": "Which of these is a gas giant?",
+    "options": ["Earth", "Mars", "Saturn", "Mercury"],
+    "answer": "Saturn",
+    "explanation": "Saturn is a gas giant made mostly of gas, not rock like Earth or Mars."
+  },
+  {
+    "id": 31,
+    "question": "What lights up the Moon at night?",
+    "options": ["Earth", "Sun", "stars", "clouds"],
+    "answer": "Sun",
+    "explanation": "The Moon shines because it reflects sunlight, not because it makes its own light."
+  },
+  {
+    "id": 32,
+    "question": "Which planet is second from the Sun?",
+    "options": ["Earth", "Venus", "Mars", "Mercury"],
+    "answer": "Venus",
+    "explanation": "Venus is the second planet from the Sun, between Mercury and Earth."
+  },
+  {
+    "id": 33,
+    "question": "What do we call a group of planets and a star?",
+    "options": ["galaxy", "constellation", "solar system", "nebula"],
+    "answer": "solar system",
+    "explanation": "Our solar system has the Sun and planets like Earth orbiting it."
+  },
+  {
+    "id": 34,
+    "question": "Which of these is a dwarf planet?",
+    "options": ["Mars", "Pluto", "Jupiter", "Venus"],
+    "answer": "Pluto",
+    "explanation": "Pluto is a dwarf planet, smaller than regular planets and far from the Sun."
+  },
+  {
+    "id": 35,
+    "question": "What do we call the dark spots on the Moon?",
+    "options": ["craters", "seas", "mountains", "clouds"],
+    "answer": "seas",
+    "explanation": "The dark spots on the Moon are called seas, but they’re really flat areas, not water."
+  },
+  {
+    "id": 36,
+    "question": "Which planet is known for its blue color?",
+    "options": ["Earth", "Mars", "Neptune", "Venus"],
+    "answer": "Neptune",
+    "explanation": "Neptune looks blue because of gases in its atmosphere."
+  },
+  {
+    "id": 37,
+    "question": "What do we call the time when Earth’s shadow covers the Moon?",
+    "options": ["solar eclipse", "lunar eclipse", "new moon", "full moon"],
+    "answer": "lunar eclipse",
+    "explanation": "A lunar eclipse happens when Earth’s shadow makes the Moon dark."
+  },
+  {
+    "id": 38,
+    "question": "Which of these is farthest from the Sun?",
+    "options": ["Earth", "Mars", "Neptune", "Jupiter"],
+    "answer": "Neptune",
+    "explanation": "Neptune is the farthest planet from the Sun in our solar system."
+  },
+  {
+    "id": 39,
+    "question": "What is the shape of Earth?",
+    "options": ["flat", "cube", "sphere", "triangle"],
+    "answer": "sphere",
+    "explanation": "Earth is a round ball, or sphere, as seen from space."
+  },
+  {
+    "id": 40,
+    "question": "Which of these helps us see stars at night?",
+    "options": ["Sun", "Moon", "darkness", "clouds"],
+    "answer": "darkness",
+    "explanation": "Darkness lets us see stars because the Sun’s light isn’t hiding them."
+  },
+  {
+    "id": 41,
+    "question": "What do we call a star that suddenly gets very bright?",
+    "options": ["supernova", "comet", "meteor", "planet"],
+    "answer": "supernova",
+    "explanation": "A supernova is a star that explodes and shines super bright for a short time."
+  },
+  {
+    "id": 42,
+    "question": "Which planet has a big red spot?",
+    "options": ["Mars", "Jupiter", "Saturn", "Earth"],
+    "answer": "Jupiter",
+    "explanation": "Jupiter has a giant red spot, which is a huge storm."
+  },
+  {
+    "id": 43,
+    "question": "What do we call the tiny rocks that orbit the Sun?",
+    "options": ["moons", "asteroids", "stars", "comets"],
+    "answer": "asteroids",
+    "explanation": "Asteroids are small, rocky objects that orbit the Sun, not stars or moons."
+  },
+  {
+    "id": 44,
+    "question": "Which of these is a natural satellite?",
+    "options": ["Sun", "Moon", "Mars", "Jupiter"],
+    "answer": "Moon",
+    "explanation": "The Moon is a natural satellite that orbits Earth."
+  },
+  {
+    "id": 45,
+    "question": "What makes the Sun shine?",
+    "options": ["fire", "electricity", "fusion", "reflection"],
+    "answer": "fusion",
+    "explanation": "Fusion is when gases inside the Sun smash together, making light and heat."
+  },
+  {
+    "id": 46,
+    "question": "Which planet is third from the Sun?",
+    "options": ["Earth", "Venus", "Mars", "Mercury"],
+    "answer": "Earth",
+    "explanation": "Earth is the third planet from the Sun, after Mercury and Venus."
+  },
+  {
+    "id": 47,
+    "question": "What do we call a huge group of stars?",
+    "options": ["solar system", "galaxy", "constellation", "planet"],
+    "answer": "galaxy",
+    "explanation": "A galaxy is a giant collection of stars, like the Milky Way."
+  },
+  {
+    "id": 48,
+    "question": "Which of these has no light of its own?",
+    "options": ["Sun", "Star", "Moon", "Comet"],
+    "answer": "Moon",
+    "explanation": "The Moon reflects the Sun’s light and doesn’t make its own."
+  },
+  {
+    "id": 49,
+    "question": "What do we call the study of stars and planets?",
+    "options": ["biology", "astronomy", "geology", "chemistry"],
+    "answer": "astronomy",
+    "explanation": "Astronomy is the science of studying space, stars, and planets."
+  },
+  {
+    "id": 50,
+    "question": "Which planet is known for its sideways spin?",
+    "options": ["Mars", "Uranus", "Venus", "Earth"],
+    "answer": "Uranus",
+    "explanation": "Uranus spins on its side, unlike most planets."
+  },
+  {
+    "id": 51,
+    "question": "What do we call a rock that hits Earth from space?",
+    "options": ["meteor", "meteorite", "comet", "asteroid"],
+    "answer": "meteorite",
+    "explanation": "A meteorite is a meteor that lands on Earth instead of burning up."
+  },
+  {
+    "id": 52,
+    "question": "Which of these is a hot ball of gas?",
+    "options": ["Moon", "Star", "Asteroid", "Planet"],
+    "answer": "Star",
+    "explanation": "Stars are hot balls of gas that shine, like the Sun."
+  },
+  {
+    "id": 53,
+    "question": "What causes tides on Earth?",
+    "options": ["Sun’s heat", "Moon’s gravity", "Earth’s spin", "Wind"],
+    "answer": "Moon’s gravity",
+    "explanation": "The Moon’s gravity pulls on Earth’s oceans, making tides."
+  },
+  {
+    "id": 54,
+    "question": "Which planet has no moons?",
+    "options": ["Earth", "Venus", "Mars", "Jupiter"],
+    "answer": "Venus",
+    "explanation": "Venus has no moons orbiting it, unlike Earth or Mars."
+  },
+  {
+    "id": 55,
+    "question": "What do we call the bright part of a comet?",
+    "options": ["tail", "head", "ring", "core"],
+    "answer": "tail",
+    "explanation": "The tail of a comet glows when it gets close to the Sun."
+  },
+  {
+    "id": 56,
+    "question": "Which of these is the hottest?",
+    "options": ["Moon", "Sun", "Earth", "Mars"],
+    "answer": "Sun",
+    "explanation": "The Sun is the hottest because it’s a star making heat and light."
+  },
+  {
+    "id": 57,
+    "question": "What do we call the line Earth spins around?",
+    "options": ["orbit", "axis", "equator", "pole"],
+    "answer": "axis",
+    "explanation": "The axis is an imaginary line Earth spins on, like a top."
+  },
+  {
+    "id": 58,
+    "question": "Which planet is fourth from the Sun?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Mars",
+    "explanation": "Mars is the fourth planet from the Sun, after Earth."
+  },
+  {
+    "id": 59,
+    "question": "What do we call a star’s brightness?",
+    "options": ["size", "magnitude", "color", "distance"],
+    "answer": "magnitude",
+    "explanation": "Magnitude is how bright a star looks from Earth."
+  },
+  {
+    "id": 60,
+    "question": "Which of these orbits the Earth?",
+    "options": ["Sun", "Moon", "Mars", "Venus"],
+    "answer": "Moon",
+    "explanation": "The Moon orbits Earth, taking about 28 days to go around once."
+  },
+  {
+    "id": 61,
+    "question": "What do we call the first people to walk on the Moon?",
+    "options": ["astronomers", "astronauts", "scientists", "pilots"],
+    "answer": "astronauts",
+    "explanation": "Astronauts are people trained to travel in space, like those who walked on the Moon."
+  },
+  {
+    "id": 62,
+    "question": "Which planet has a day longer than its year?",
+    "options": ["Earth", "Venus", "Mars", "Mercury"],
+    "answer": "Venus",
+    "explanation": "Venus spins so slowly that its day (243 Earth days) is longer than its year (225 Earth days)."
+  },
+  {
+    "id": 63,
+    "question": "What do we call a cloud of gas and dust in space?",
+    "options": ["galaxy", "nebula", "comet", "asteroid"],
+    "answer": "nebula",
+    "explanation": "A nebula is a big cloud in space where stars can be born."
+  },
+  {
+    "id": 64,
+    "question": "Which of these is the coldest planet?",
+    "options": ["Earth", "Mars", "Neptune", "Jupiter"],
+    "answer": "Neptune",
+    "explanation": "Neptune is the coldest because it’s farthest from the Sun."
+  },
+  {
+    "id": 65,
+    "question": "What do we call the Sun and all its planets?",
+    "options": ["galaxy", "solar system", "constellation", "universe"],
+    "answer": "solar system",
+    "explanation": "The solar system is the Sun and everything that orbits it, like planets."
+  },
+  {
+    "id": 66,
+    "question": "Which of these can you see in the day sky?",
+    "options": ["stars", "Sun", "comets", "asteroids"],
+    "answer": "Sun",
+    "explanation": "The Sun is so bright it’s the main thing we see in the day sky."
+  },
+  {
+    "id": 67,
+    "question": "What do we call the holes on the Moon’s surface?",
+    "options": ["craters", "mountains", "valleys", "seas"],
+    "answer": "craters",
+    "explanation": "Craters are holes made by rocks hitting the Moon long ago."
+  },
+  {
+    "id": 68,
+    "question": "Which planet is fifth from the Sun?",
+    "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+    "answer": "Jupiter",
+    "explanation": "Jupiter is the fifth planet from the Sun, after Mars."
+  },
+  {
+    "id": 69,
+    "question": "What do we call everything in space?",
+    "options": ["solar system", "galaxy", "universe", "constellation"],
+    "answer": "universe",
+    "explanation": "The universe is all of space, including stars, planets, and galaxies."
+  },
+  {
+    "id": 70,
+    "question": "Which of these has a tail when near the Sun?",
+    "options": ["asteroid", "comet", "planet", "moon"],
+    "answer": "comet",
+    "explanation": "A comet grows a tail when the Sun melts its ice near it."
+  },
+  {
+    "id": 71,
+    "question": "What do we call the North Star?",
+    "options": ["Sirius", "Polaris", "Betelgeuse", "Sun"],
+    "answer": "Polaris",
+    "explanation": "Polaris is the North Star, helping people find north at night."
+  },
+  {
+    "id": 72,
+    "question": "Which planet has the most rings?",
+    "options": ["Jupiter", "Saturn", "Uranus", "Neptune"],
+    "answer": "Saturn",
+    "explanation": "Saturn has the most visible and famous rings in our solar system."
+  },
+  {
+    "id": 73,
+    "question": "What do we call a star that helps sailors find direction?",
+    "options": ["comet", "planet", "pole star", "meteor"],
+    "answer": "pole star",
+    "explanation": "The pole star, like Polaris, stays in the north and helps sailors navigate."
+  },
+  {
+    "id": 74,
+    "question": "Which of these is a rocky planet?",
+    "options": ["Jupiter", "Saturn", "Earth", "Neptune"],
+    "answer": "Earth",
+    "explanation": "Earth is a rocky planet with a solid surface, unlike gas giants."
+  },
+  {
+    "id": 75,
+    "question": "What do we call the bright stars we see at night?",
+    "options": ["planets", "moons", "constellations", "suns"],
+    "answer": "constellations",
+    "explanation": "Constellations are groups of bright stars that form patterns in the sky."
+  },
+  {
+    "id": 76,
+    "question": "Which planet is sixth from the Sun?",
+    "options": ["Jupiter", "Saturn", "Uranus", "Neptune"],
+    "answer": "Saturn",
+    "explanation": "Saturn is the sixth planet from the Sun, after Jupiter."
+  },
+  {
+    "id": 77,
+    "question": "What do we call the Sun’s family of planets?",
+    "options": ["galaxy", "solar system", "universe", "constellation"],
+    "answer": "solar system",
+    "explanation": "The solar system is the Sun and its orbiting planets and moons."
+  },
+  {
+    "id": 78,
+    "question": "Which of these is a tool to measure star positions?",
+    "options": ["compass", "telescope", "sextant", "thermometer"],
+    "answer": "sextant",
+    "explanation": "A sextant helps measure where stars are in the sky, used by sailors."
+  },
+  {
+    "id": 79,
+    "question": "What do we call a star that’s no longer shining?",
+    "options": ["dead star", "comet", "planet", "meteor"],
+    "answer": "dead star",
+    "explanation": "A dead star has stopped making light and heat, like a white dwarf."
+  },
+  {
+    "id": 80,
+    "question": "Which planet has a thick cloudy atmosphere?",
+    "options": ["Mars", "Venus", "Earth", "Mercury"],
+    "answer": "Venus",
+    "explanation": "Venus has thick clouds that trap heat, making it very hot."
+  },
+  {
+    "id": 81,
+    "question": "What do we call the movement of Earth around the Sun?",
+    "options": ["rotation", "revolution", "tilt", "spin"],
+    "answer": "revolution",
+    "explanation": "Revolution is Earth’s trip around the Sun, taking one year."
+  },
+  {
+    "id": 82,
+    "question": "Which of these is a giant planet?",
+    "options": ["Mercury", "Mars", "Jupiter", "Earth"],
+    "answer": "Jupiter",
+    "explanation": "Jupiter is a giant planet made mostly of gas, much bigger than Earth."
+  },
+  {
+    "id": 83,
+    "question": "What do we call the bright flash of a meteor?",
+    "options": ["shooting star", "comet", "planet", "sunspot"],
+    "answer": "shooting star",
+    "explanation": "A shooting star is what we call a meteor’s bright streak in the sky."
+  },
+  {
+    "id": 84,
+    "question": "Which planet is seventh from the Sun?",
+    "options": ["Saturn", "Uranus", "Neptune", "Jupiter"],
+    "answer": "Uranus",
+    "explanation": "Uranus is the seventh planet from the Sun, after Saturn."
+  },
+  {
+    "id": 85,
+    "question": "What do we call the Sun’s outer layer we can see?",
+    "options": ["core", "photosphere", "corona", "ring"],
+    "answer": "photosphere",
+    "explanation": "The photosphere is the Sun’s surface we see, where light comes from."
+  },
+  {
+    "id": 86,
+    "question": "Which of these is NOT a star?",
+    "options": ["Sun", "Polaris", "Moon", "Sirius"],
+    "answer": "Moon",
+    "explanation": "The Moon is a satellite, not a star like the Sun or Sirius."
+  },
+  {
+    "id": 87,
+    "question": "What do we call a small planet-like object?",
+    "options": ["dwarf planet", "comet", "meteor", "star"],
+    "answer": "dwarf planet",
+    "explanation": "A dwarf planet, like Pluto, is smaller than regular planets."
+  },
+  {
+    "id": 88,
+    "question": "Which planet has the shortest day?",
+    "options": ["Earth", "Jupiter", "Mars", "Venus"],
+    "answer": "Jupiter",
+    "explanation": "Jupiter’s day is about 10 hours, the shortest because it spins fast."
+  },
+  {
+    "id": 89,
+    "question": "What do we call the edge of the solar system?",
+    "options": ["galaxy", "orbit", "heliosphere", "atmosphere"],
+    "answer": "heliosphere",
+    "explanation": "The heliosphere is the bubble around the solar system made by the Sun."
+  },
+  {
+    "id": 90,
+    "question": "Which of these is a bright star in Orion?",
+    "options": ["Polaris", "Betelgeuse", "Sun", "Venus"],
+    "answer": "Betelgeuse",
+    "explanation": "Betelgeuse is a red star in the Orion constellation."
+  },
+  {
+    "id": 91,
+    "question": "What do we call the study of the Moon?",
+    "options": ["astronomy", "selenology", "geology", "meteorology"],
+    "answer": "selenology",
+    "explanation": "Selenology is the study of the Moon’s surface and history."
+  },
+  {
+    "id": 92,
+    "question": "Which planet has strong winds?",
+    "options": ["Earth", "Mars", "Neptune", "Mercury"],
+    "answer": "Neptune",
+    "explanation": "Neptune has the fastest winds in the solar system, over 1,000 miles per hour."
+  },
+  {
+    "id": 93,
+    "question": "What do we call a star’s explosion?",
+    "options": ["meteor", "supernova", "comet", "eclipse"],
+    "answer": "supernova",
+    "explanation": "A supernova is when a star explodes, shining very brightly."
+  },
+  {
+    "id": 94,
+    "question": "Which of these is a morning star?",
+    "options": ["Moon", "Venus", "Mars", "Sun"],
+    "answer": "Venus",
+    "explanation": "Venus is called the morning star because it’s bright in the sky before sunrise."
+  },
+  {
+    "id": 95,
+    "question": "What do we call the Sun’s dark spots?",
+    "options": ["craters", "sunspots", "clouds", "rings"],
+    "answer": "sunspots",
+    "explanation": "Sunspots are cooler, darker areas on the Sun’s surface."
+  },
+  {
+    "id": 96,
+    "question": "Which planet has two moons?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Mars",
+    "explanation": "Mars has two small moons called Phobos and Deimos."
+  },
+  {
+    "id": 97,
+    "question": "What do we call the imaginary line around Earth’s middle?",
+    "options": ["axis", "equator", "orbit", "pole"],
+    "answer": "equator",
+    "explanation": "The equator is an imaginary line splitting Earth into north and south."
+  },
+  {
+    "id": 98,
+    "question": "Which of these is a tool to explore space?",
+    "options": ["car", "rocket", "boat", "plane"],
+    "answer": "rocket",
+    "explanation": "Rockets take people and machines into space to explore."
+  },
+  {
+    "id": 99,
+    "question": "What do we call the time when the Moon is fully lit?",
+    "options": ["new moon", "full moon", "crescent", "eclipse"],
+    "answer": "full moon",
+    "explanation": "A full moon is when we see the whole lit side of the Moon."
+  },
+  {
+    "id": 100,
+    "question": "Which planet is eighth from the Sun?",
+    "options": ["Uranus", "Neptune", "Saturn", "Jupiter"],
+    "answer": "Neptune",
+    "explanation": "Neptune is the eighth and farthest planet from the Sun."
+  }
+]
