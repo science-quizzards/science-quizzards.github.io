@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { shuffleArray } from '../data';
 import audioManager from '../utils/AudioManager';
 
-const Question = ({ question, onAnswer, selectedOption, showExplanation, timeLimit = 60 }) => {
+const Question = ({ question, onAnswer, selectedOption, showExplanation, timeLimit = 60, questionNumber, theme }) => {
   const [selectedOptionLocal, setSelectedOptionLocal] = useState(null);
   const [timeLeft, setTimeLeft] = useState(timeLimit);
   const [shuffledOptions, setShuffledOptions] = useState([]);
@@ -55,134 +55,161 @@ const Question = ({ question, onAnswer, selectedOption, showExplanation, timeLim
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="max-w-4xl mx-auto bg-gradient-to-b from-indigo-900/40 to-purple-900/30 p-8 rounded-2xl shadow-lg border border-indigo-500/30 relative"
+      className={`
+        max-w-4xl mx-auto 
+        bg-${theme.primary}-900/30 
+        backdrop-blur-lg 
+        border border-${theme.primary}-500/20
+        p-8 rounded-2xl 
+        relative
+        shadow-lg
+        shadow-${theme.primary}-500/10
+      `}
     >
-      {/* Holographic overlay */}
-      <div className="holographic-overlay absolute inset-0 rounded-2xl pointer-events-none"></div>
-      
-      <div className="mb-8 flex justify-between items-center relative z-10">
-        <div className="px-4 py-2 bg-blue-900/50 rounded-lg border border-blue-500/50 text-blue-300 font-bold backdrop-blur-sm">
-          <span className="holographic-text">Question</span>
+      {/* Header with Timer */}
+      <div className="mb-8 flex justify-between items-center">
+        <div className={`px-4 py-2 bg-${theme.primary}-900/40 rounded-lg text-${theme.primary}-300 font-[Orbitron] text-sm`}>
+          Question {questionNumber}
         </div>
         
-        <div className={`relative w-12 h-12 flex items-center justify-center ${
+        <div className={`relative w-14 h-14 flex items-center justify-center ${
           timeLeft <= 10 ? 'animate-pulse' : ''
         }`}>
           <div className="absolute inset-0">
             <svg className="w-full h-full transform -rotate-90">
               <circle
-                cx="24"
-                cy="24"
-                r="20"
+                cx="28"
+                cy="28"
+                r="24"
                 stroke="currentColor"
-                strokeWidth="4"
+                strokeWidth="3"
                 fill="none"
                 className="text-gray-700/30"
               />
               <circle
-                cx="24"
-                cy="24"
-                r="20"
+                cx="28"
+                cy="28"
+                r="24"
                 stroke="currentColor"
-                strokeWidth="4"
+                strokeWidth="3"
                 fill="none"
-                strokeDasharray={125.66} // 2 * π * r
-                strokeDashoffset={125.66 * (1 - timeLeft / 60)}
+                strokeDasharray={150.79} // 2 * π * r
+                strokeDashoffset={150.79 * (1 - timeLeft / 60)}
                 className={`transition-all duration-1000 ease-linear ${
                   timeLeft <= 10
                     ? 'text-red-500'
-                    : 'text-indigo-500'
+                    : `text-${theme.primary}-500`
                 }`}
               />
-          </svg>
+            </svg>
           </div>
-          <span className={`relative z-10 text-lg font-bold ${
+          <span className={`relative z-10 text-lg font-[Orbitron] ${
             timeLeft <= 10
               ? 'text-red-400'
-              : 'text-white'
+              : `text-${theme.primary}-100`
           }`}>
-            {Math.max(0, timeLeft)}s
+            {Math.max(0, timeLeft)}
           </span>
         </div>
       </div>
       
-      <h2 className="text-3xl font-bold mb-10 text-center text-white bg-indigo-900/30 py-5 px-6 rounded-xl border border-indigo-500/30 shadow-inner relative holo-panel">
-        <span className="relative z-10">{question.question}</span>
-      </h2>
+      {/* Question Text */}
+      <div className="mb-10">
+        <h2 className={`
+          text-2xl md:text-3xl 
+          font-[Orbitron] 
+          text-center 
+          bg-clip-text text-transparent 
+          bg-gradient-to-r ${theme.gradient}
+          drop-shadow-lg
+          filter
+          [text-shadow:0_0_10px_${theme.primary}-500/30]
+        `}>
+          {question.question}
+        </h2>
+      </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 relative z-10">
+      {/* Answer Options */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         {shuffledOptions.map((option, index) => (
           <motion.button
             key={index}
-            whileHover={{ scale: 1.03 }}
+            whileHover={{ scale: 1.02, filter: 'brightness(1.1)' }}
             whileTap={{ scale: 0.98 }}
             onClick={() => !selectedOptionLocal && handleAnswer(option)}
             disabled={selectedOptionLocal !== null}
             className={`
-              relative p-6 rounded-xl cursor-pointer transition-all text-left
+              w-full p-5 rounded-xl text-left transition-all
+              font-[Orbitron] backdrop-blur-sm
+              border-2
+              hover:shadow-lg hover:shadow-${theme.primary}-500/20
               ${!selectedOptionLocal 
-                ? 'bg-indigo-800/30 hover:bg-indigo-700/40 border-2 border-indigo-500/50 shadow-md' 
+                ? `bg-${theme.primary}-900/30 hover:bg-${theme.primary}-800/40 border-${theme.primary}-500/30` 
                 : option === question.answer
-                  ? 'bg-green-800/40 border-2 border-green-500 shadow-md'
+                  ? 'bg-green-900/30 border-green-500/50'
                   : selectedOptionLocal === option
-                    ? 'bg-red-800/40 border-2 border-red-500 shadow-md'
-                    : 'bg-indigo-900/20 border-2 border-indigo-600/20 opacity-60'
+                    ? 'bg-red-900/30 border-red-500/50'
+                    : `bg-${theme.primary}-900/20 border-${theme.primary}-600/20 opacity-60`
               }
             `}
           >
-            {/* Neon scan effect visible on hover when not yet answered */}
-            {!selectedOptionLocal && (
-              <div className="absolute inset-0 pointer-events-none option-scan-effect"></div>
-            )}
-            
-            <div className="flex items-center gap-4 relative z-10">
-              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-indigo-700/70 border border-indigo-500 text-xl font-bold shadow option-indicator">
+            <div className="flex items-center gap-4">
+              <div className={`
+                w-10 h-10 flex-shrink-0 rounded-lg flex items-center justify-center
+                ${!selectedOptionLocal 
+                  ? `bg-${theme.primary}-700/50 border border-${theme.primary}-500/50` 
+                  : option === question.answer
+                    ? 'bg-green-700/50 border border-green-500/50'
+                    : selectedOptionLocal === option
+                      ? 'bg-red-700/50 border border-red-500/50'
+                      : `bg-${theme.primary}-700/30 border border-${theme.primary}-500/30`
+                }
+              `}>
                 {String.fromCharCode(65 + index)}
               </div>
-              <span className="text-xl">{option}</span>
+              <span className={`text-lg text-${theme.primary}-100`}>{option}</span>
             </div>
 
-            {selectedOptionLocal && option === question.answer && (
+            {/* Answer Indicators */}
+            {selectedOptionLocal && (option === question.answer || selectedOptionLocal === option) && (
               <motion.div 
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="absolute top-3 right-3 text-green-300"
+                className={`absolute top-4 right-4 ${
+                  option === question.answer ? 'text-green-400' : 'text-red-400'
+                }`}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </motion.div>
-            )}
-
-            {selectedOptionLocal === option && option !== question.answer && (
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="absolute top-3 right-3 text-red-400"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+                {option === question.answer ? (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
               </motion.div>
             )}
           </motion.button>
         ))}
       </div>
 
+      {/* Explanation Panel */}
       {showExplanation && (
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-6 p-6 bg-purple-800/30 border-2 border-purple-500/50 rounded-xl shadow-inner relative explanation-panel"
+          className={`mt-6 p-6 bg-${theme.primary}-900/30 backdrop-blur-sm border border-${theme.primary}-500/30 rounded-xl`}
         >
-          <h3 className="font-bold text-2xl text-purple-300 mb-3 flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span className="holographic-text">Explanation</span>
-          </h3>
-          <div className="scanning-line"></div>
-          <p className="text-lg leading-relaxed relative z-10">{question.explanation}</p>
+          <div className="flex items-center gap-2 mb-4">
+            <div className={`w-2 h-2 rounded-full bg-${theme.primary}-400`}></div>
+            <h3 className={`font-[Orbitron] text-xl text-${theme.primary}-300`}>
+              Explanation
+            </h3>
+          </div>
+          <p className={`font-[Orbitron] text-base text-${theme.primary}-100/90 leading-relaxed`}>
+            {question.explanation}
+          </p>
         </motion.div>
       )}
     </motion.div>
