@@ -3,28 +3,8 @@ import { motion } from 'framer-motion';
 import { getScores, saveScore } from '../data';
 import NicknameForm from './NicknameForm';
 import { generateLeaderboard } from '../data/leaderboard';
-import audioManager from '../utils/AudioManager';
-
-const getThemeColors = (category) => {
-  return category === 'earth-science' 
-    ? {
-        primary: 'emerald',
-        gradient: 'from-emerald-400 via-green-500 to-teal-500',
-        bgFrom: 'from-emerald-900/50',
-        bgTo: 'to-green-900/50',
-        border: 'border-emerald-500/30'
-      }
-    : {
-        primary: 'purple',
-        gradient: 'from-blue-400 via-purple-500 to-pink-500',
-        bgFrom: 'from-indigo-900/50',
-        bgTo: 'to-purple-900/50',
-        border: 'border-indigo-500/30'
-      };
-};
 
 const Results = ({ score, totalQuestions, category, onRestart, onBackToCategories }) => {
-  const theme = getThemeColors(category);
   const [showNicknameForm, setShowNicknameForm] = useState(true);
   const [leaderboard, setLeaderboard] = useState([]);
   const [yourScore, setYourScore] = useState(null);
@@ -56,11 +36,6 @@ const Results = ({ score, totalQuestions, category, onRestart, onBackToCategorie
   
   const { message, emoji } = getResults();
   
-  useEffect(() => {
-    // Return to main music when showing results
-    audioManager.returnToMainMusic();
-  }, []);
-  
   if (showNicknameForm) {
     return (
       <NicknameForm 
@@ -82,7 +57,7 @@ const Results = ({ score, totalQuestions, category, onRestart, onBackToCategorie
         <motion.h2 
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className={`text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r ${theme.gradient}`}
+          className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
         >
           Mission Complete!
         </motion.h2>
@@ -101,7 +76,7 @@ const Results = ({ score, totalQuestions, category, onRestart, onBackToCategorie
           initial={{ x: -30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className={`bg-${theme.primary}-900/30 p-8 rounded-2xl border-2 ${theme.border} backdrop-blur-sm relative overflow-hidden shadow-lg`}
+          className="bg-indigo-900/30 p-8 rounded-2xl border-2 border-indigo-500/30 backdrop-blur-sm relative overflow-hidden shadow-lg"
         >
           <div className="holographic-overlay"></div>
           <div className="absolute -top-12 -right-12 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl"></div>
@@ -153,7 +128,7 @@ const Results = ({ score, totalQuestions, category, onRestart, onBackToCategorie
           initial={{ x: 30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className={`bg-${theme.primary}-900/30 p-8 rounded-2xl border-2 ${theme.border} backdrop-blur-sm relative overflow-hidden shadow-lg`}
+          className="bg-indigo-900/30 p-8 rounded-2xl border-2 border-indigo-500/30 backdrop-blur-sm relative overflow-hidden shadow-lg"
         >
           <div className="holographic-overlay"></div>
           <div className="absolute -top-12 -left-12 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl"></div>
@@ -214,10 +189,10 @@ const Results = ({ score, totalQuestions, category, onRestart, onBackToCategorie
         className="flex justify-center gap-4 flex-wrap"
       >
         <motion.button
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(79, 70, 229, 0.6)" }}
           whileTap={{ scale: 0.95 }}
           onClick={onRestart}
-          className={`px-8 py-3 bg-gradient-to-r ${theme.gradient} rounded-xl font-bold text-white shadow-xl relative overflow-hidden group`}
+          className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-bold text-white shadow-xl relative overflow-hidden group"
         >
           <span className="absolute top-0 left-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
           <span className="relative flex items-center justify-center gap-2">
@@ -229,10 +204,10 @@ const Results = ({ score, totalQuestions, category, onRestart, onBackToCategorie
         </motion.button>
         
         <motion.button
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(79, 70, 229, 0.6)" }}
           whileTap={{ scale: 0.95 }}
           onClick={onBackToCategories}
-          className={`px-8 py-3 bg-gradient-to-r from-${theme.primary}-600/80 to-${theme.primary}-700/80 rounded-xl font-bold text-white shadow-xl relative overflow-hidden group`}
+          className="px-8 py-3 bg-gradient-to-r from-indigo-600/80 to-indigo-700/80 rounded-xl font-bold text-white shadow-xl relative overflow-hidden group"
         >
           <span className="absolute top-0 left-0 w-full h-full bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
           <span className="relative flex items-center justify-center gap-2">

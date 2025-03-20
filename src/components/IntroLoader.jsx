@@ -6,30 +6,35 @@ const IntroLoader = ({ onComplete }) => {
   const [showTerminal, setShowTerminal] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
   
-  // Enhanced terminal text with more space theme
+  // Terminal text animation steps
   const terminalLines = [
-    "$ initiating quantum core systems...",
-    "$ establishing neural network connections...",
-    "$ loading cosmic knowledge database...",
-    "$ calibrating holographic interfaces...",
-    "$ synchronizing with stellar databases...",
-    "$ activating space-time learning protocols...",
-    "$ initializing educational matrix...",
-    "$ configuring cosmic quiz parameters...",
-    "$ all systems operational: ready for launch",
-    "$ welcome to The Science Quizzard..."
+    "$ initializing science_quizzard.exe",
+    "$ loading knowledge database...",
+    "$ connecting to stellar network...",
+    "$ calibrating quantum processors...",
+    "$ synchronizing galactic databases...",
+    "$ loading educational protocols...",
+    "$ activating neural interface...",
+    "$ initiating holographic display...",
+    "$ system check: all systems operational",
+    "$ launching The Science Quizzard..."
   ];
 
   useEffect(() => {
+    // Simulate terminal typing and loading progress
     const terminalInterval = setInterval(() => {
       if (step < terminalLines.length - 1) {
         setStep(prev => prev + 1);
         setLoadingProgress(prev => prev + (100 / terminalLines.length));
       } else {
+        // Complete loading
         setLoadingProgress(100);
         clearInterval(terminalInterval);
+        
+        // Allow progress bar to reach 100% then transition out
         setTimeout(() => {
           setShowTerminal(false);
+          // Completely remove the loader after animation completes
           setTimeout(() => {
             onComplete();
           }, 1000);
@@ -44,28 +49,22 @@ const IntroLoader = ({ onComplete }) => {
     <AnimatePresence mode="wait">
       {showTerminal && (
         <motion.div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[#070b14]"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Enhanced background effects */}
+          {/* Background animations */}
           <div className="absolute inset-0 overflow-hidden">
-            {/* Space stars background */}
-            <div className="space-stars"></div>
-            
-            {/* Nebula effect */}
-            <div className="absolute inset-0 nebula-glow"></div>
-            
-            {/* Holographic grid */}
+            {/* Animated grid */}
             <div className="absolute inset-0 holographic-grid opacity-20"></div>
             
-            {/* Animated scan line with holographic effect */}
-            <div className="absolute top-0 left-0 w-full h-2 holographic-scanner"></div>
+            {/* Animated scan line */}
+            <div className="absolute top-0 left-0 w-full h-2 bg-blue-500/30 animate-scan"></div>
             
-            {/* Floating planets with cosmic animation */}
+            {/* Planets */}
             <motion.div 
-              className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-purple-900/30 backdrop-blur-3xl float-cosmic"
+              className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-purple-900/30 backdrop-blur-3xl"
               animate={{ 
                 rotate: 360, 
                 scale: [1, 1.05, 1],
@@ -77,7 +76,7 @@ const IntroLoader = ({ onComplete }) => {
             />
             
             <motion.div 
-              className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-blue-900/20 backdrop-blur-3xl float-cosmic"
+              className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-blue-900/20 backdrop-blur-3xl"
               animate={{ 
                 rotate: -360,
                 scale: [1, 1.03, 1], 
@@ -88,62 +87,63 @@ const IntroLoader = ({ onComplete }) => {
               }}
             />
             
-            {/* Twinkling stars */}
-            <div className="absolute inset-0 twinkling-stars"></div>
+            {/* Animated stars */}
+            <div className="absolute inset-0 space-stars opacity-40"></div>
           </div>
           
-          {/* Main content */}
+          {/* Central content */}
           <div className="relative z-10 max-w-4xl w-full px-6">
-            {/* Enhanced logo section */}
+            {/* Logo */}
             <motion.div 
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1 }}
               className="mb-12 text-center"
             >
-              <h1 className="mt-4 text-3xl font-['Orbitron'] font-bold cosmic-text">
-                <span className="holographic-text" data-text="System Initialization">
+              
+              <h1 className="mt-4 text-3xl font-bold">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500">
                   System Initialization
                 </span>
               </h1>
             </motion.div>
             
-            {/* Enhanced terminal window */}
+            {/* Terminal window */}
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="holo-panel w-full bg-gray-900/80 rounded-xl overflow-hidden backdrop-blur-md"
+              className="w-full bg-gray-900/80 border-2 border-indigo-500/50 rounded-xl overflow-hidden backdrop-blur-md shadow-[0_0_20px_rgba(99,102,241,0.3)]"
             >
-              {/* Terminal header with holographic effect */}
-              <div className="bg-gray-800/80 px-4 py-3 border-b border-indigo-500/30 flex items-center holographic-overlay">
+              {/* Terminal header */}
+              <div className="bg-gray-800/80 px-4 py-3 border-b border-indigo-500/30 flex items-center">
                 <div className="flex gap-2 mr-4">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
-                <div className="text-xs text-center flex-1 text-indigo-300 font-['Orbitron']">
-                  QUANTUM_TERMINAL_v2.0
+                <div className="text-xs text-center flex-1 text-indigo-300 font-mono">
+                  science_quizzard_v1.0.4.exe — cosmic_terminal
                 </div>
               </div>
               
-              {/* Enhanced terminal content */}
+              {/* Terminal content */}
               <div className="p-5 font-mono text-sm text-green-400 h-64 overflow-hidden relative">
-                <div className="scanner-line"></div>
-                <div className="particles-container absolute inset-0"></div>
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-indigo-950/30 pointer-events-none"></div>
+                <div className="scanner-line absolute left-0 right-0 h-full"></div>
                 
-                {/* Terminal lines with enhanced animation */}
-                <div className="space-y-2 relative z-10">
+                {/* Terminal lines */}
+                <div className="space-y-2">
                   {terminalLines.slice(0, step + 1).map((line, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="flex items-center"
+                      className="flex"
                     >
-                      <span className="text-indigo-400 mr-2 option-indicator">&gt;</span>
-                      <span className={`${index === step ? "typing-animation" : ""} cosmic-text`}>
+                      <span className="text-indigo-400 mr-2">&gt;</span>
+                      <span className={index === step ? "typing-animation" : ""}>
                         {line}
                       </span>
                       {index === step && (
@@ -154,18 +154,18 @@ const IntroLoader = ({ onComplete }) => {
                 </div>
               </div>
               
-              {/* Enhanced loading progress */}
+              {/* Loading progress */}
               <div className="px-5 py-4 border-t border-indigo-500/30 bg-gray-800/50">
-                <div className="flex justify-between items-center mb-2 text-xs font-['Orbitron'] text-indigo-300">
+                <div className="flex justify-between items-center mb-2 text-xs text-indigo-300">
                   <div className="flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                    <span>QUANTUM CORE INITIALIZATION</span>
+                    <span>Loading system modules</span>
                   </div>
                   <div>{Math.floor(loadingProgress)}%</div>
                 </div>
-                <div className="progress-bar">
+                <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
                   <motion.div 
-                    className="progress-fill"
+                    className="h-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500"
                     style={{ width: `${loadingProgress}%` }}
                     initial={{ width: 0 }}
                     animate={{ width: `${loadingProgress}%` }}
@@ -175,15 +175,15 @@ const IntroLoader = ({ onComplete }) => {
               </div>
             </motion.div>
             
-            {/* Enhanced system status */}
+            {/* System status */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
-              className="mt-8 text-center text-sm font-['Orbitron']"
+              className="mt-8 text-center text-sm text-indigo-300/70"
             >
-              <p className="cosmic-text">
-                <span className="text-indigo-400">The Science Quizzard</span> is preparing for launch...
+              <p>
+                <span className="text-indigo-400">The Science Quizzard</span> is loading...
               </p>
             </motion.div>
           </div>

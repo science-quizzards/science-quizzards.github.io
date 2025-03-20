@@ -1,6 +1,7 @@
 {
-  "name": "science-quizzards",
-  "homepage": "https://sciencequizzards.space",
+  "name": "quiz-app",
+  "homepage": "https://janzengo.github.io/quiz-app/",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

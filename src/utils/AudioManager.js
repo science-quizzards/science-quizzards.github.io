@@ -1,10 +1,8 @@
 // Audio Manager - Handles sound effects and background music
 class AudioManager {
   constructor() {
-    this.currentMusic = null;
-    this.mainMusic = null;
-    this.earthMusic = null;
-    this.spaceMusic = null;
+    this.backgroundMusic = null;
+    this.backgroundMusic2 = null;
     this.soundEffects = {};
     this.isMuted = false;
     this.bgMusicVolume = 0.4; // Default background music volume
@@ -16,17 +14,26 @@ class AudioManager {
   init() {
     if (this.isInitialized) return;
 
-    // Initialize all music tracks
-    this.mainMusic = new Audio(`${import.meta.env.BASE_URL}sounds/main.mp3`);
-    this.earthMusic = new Audio(`${import.meta.env.BASE_URL}sounds/earth.mp3`);
-    this.spaceMusic = new Audio(`${import.meta.env.BASE_URL}sounds/space.mp3`);
+    // Create background music elements
+    this.backgroundMusic = new Audio(`${import.meta.env.BASE_URL}sounds/background.mp3`);
+    this.backgroundMusic2 = new Audio(`${import.meta.env.BASE_URL}sounds/background2.mp3`);
     
-    // Set up properties for all tracks
-    [this.mainMusic, this.earthMusic, this.spaceMusic].forEach(track => {
-      if (track) {
-        track.volume = this.bgMusicVolume;
-        track.loop = true; // Enable looping for all tracks
-      }
+    // Set up properties for both tracks
+    this.backgroundMusic.volume = this.bgMusicVolume;
+    this.backgroundMusic2.volume = this.bgMusicVolume;
+    
+    // Add ended event listener to start the second track
+    this.backgroundMusic.addEventListener('ended', () => {
+      this.backgroundMusic2.play().catch(error => {
+        console.log('Background music 2 playback prevented by browser: ', error);
+      });
+    });
+
+    // Add ended event listener to start the first track again
+    this.backgroundMusic2.addEventListener('ended', () => {
+      this.backgroundMusic.play().catch(error => {
+        console.log('Background music playback prevented by browser: ', error);
+      });
     });
 
     // Preload sound effects
@@ -34,7 +41,6 @@ class AudioManager {
     this.preloadSoundEffect('correct', `${import.meta.env.BASE_URL}sounds/correct.mp3`);
     this.preloadSoundEffect('wrong', `${import.meta.env.BASE_URL}sounds/wrong.mp3`);
     this.preloadSoundEffect('blip', `${import.meta.env.BASE_URL}sounds/blip.mp3`);
-    this.preloadSoundEffect('complete', `${import.meta.env.BASE_URL}sounds/complete.mp3`);
     
     this.isInitialized = true;
   }
@@ -73,133 +79,93 @@ class AudioManager {
     }
   }
 
-  // New method to handle music transitions
-  async transitionMusic(newTrack) {
+  // Start playing background music
+  playBackgroundMusic() {
     if (this.isMuted) return;
     
-    // Ensure initialization
+    // Ensure the manager is initialized
     if (!this.isInitialized) {
       this.init();
     }
 
-    // If it's the same track, do nothing
-    if (this.currentMusic === newTrack) return;
-
-    // Fade out current music if playing
-    if (this.currentMusic && !this.currentMusic.paused) {
-      await this.fadeOut(this.currentMusic);
-      this.currentMusic.pause();
-      this.currentMusic.currentTime = 0;
-    }
-
-    // Set and play new track
-    this.currentMusic = newTrack;
-    if (this.currentMusic) {
-      this.currentMusic.currentTime = 0;
-      await this.fadeIn(this.currentMusic);
-    }
-  }
-
-  // Fade out helper
-  async fadeOut(audio, duration = 1000) {
-    const steps = 20;
-    const volumeStep = audio.volume / steps;
-    const stepDuration = duration / steps;
-
-    return new Promise(resolve => {
-      const fadeInterval = setInterval(() => {
-        if (audio.volume > volumeStep) {
-          audio.volume -= volumeStep;
-        } else {
-          audio.volume = 0;
-          clearInterval(fadeInterval);
-          resolve();
-        }
-      }, stepDuration);
-    });
-  }
-
-  // Fade in helper
-  async fadeIn(audio, duration = 1000) {
-    audio.volume = 0;
-    const playPromise = audio.play();
-    if (playPromise) {
-      await playPromise.catch(error => {
-        console.log('Audio playback prevented by browser: ', error);
-      });
-    }
-
-    const steps = 20;
-    const targetVolume = this.bgMusicVolume;
-    const volumeStep = targetVolume / steps;
-    const stepDuration = duration / steps;
-
-    return new Promise(resolve => {
-      const fadeInterval = setInterval(() => {
-        if (audio.volume < targetVolume - volumeStep) {
-          audio.volume += volumeStep;
-        } else {
-          audio.volume = targetVolume;
-          clearInterval(fadeInterval);
-          resolve();
-        }
-      }, stepDuration);
-    });
-  }
-
-  // Play main menu music
-  playMainMusic() {
-    this.transitionMusic(this.mainMusic);
-  }
-
-  // Play category-specific music
-  playCategoryMusic(category) {
-    const track = category === 'earth-science' ? this.earthMusic : this.spaceMusic;
-    this.transitionMusic(track);
-  }
-
-  // Return to main music (for quiz exit/completion)
-  returnToMainMusic() {
-    this.transitionMusic(this.mainMusic);
-  }
-
-  // Stop all music
-  stopAllMusic() {
-    [this.mainMusic, this.earthMusic, this.spaceMusic].forEach(track => {
-      if (track) {
-        track.pause();
-        track.currentTime = 0;
+    // Start playing if not already playing
+    if (this.backgroundMusic && this.backgroundMusic.paused) {
+      const playPromise = this.backgroundMusic.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log('Background music playback prevented by browser: ', error);
+        });
       }
-    });
-    this.currentMusic = null;
+    }
+  }
+
+  // Stop background music
+  stopBackgroundMusic() {
+    if (this.backgroundMusic) {
+      this.backgroundMusic.pause();
+      this.backgroundMusic.currentTime = 0;
+    }
+    if (this.backgroundMusic2) {
+      this.backgroundMusic2.pause();
+      this.backgroundMusic2.currentTime = 0;
+    }
+  }
+
+  // Pause background music
+  pauseBackgroundMusic() {
+    if (this.backgroundMusic) {
+      this.backgroundMusic.pause();
+    }
+    if (this.backgroundMusic2) {
+      this.backgroundMusic2.pause();
+    }
+  }
+
+  // Resume background music
+  resumeBackgroundMusic() {
+    if (!this.isMuted) {
+      if (this.backgroundMusic && this.backgroundMusic.paused && this.backgroundMusic.currentTime > 0) {
+        this.backgroundMusic.play().catch(error => {
+          console.log('Resume background music prevented by browser: ', error);
+        });
+      } else if (this.backgroundMusic2 && this.backgroundMusic2.paused && this.backgroundMusic2.currentTime > 0) {
+        this.backgroundMusic2.play().catch(error => {
+          console.log('Resume background music 2 prevented by browser: ', error);
+        });
+      }
+    }
   }
 
   // Mute all audio
   mute() {
     this.isMuted = true;
-    if (this.currentMusic) {
-      this.currentMusic.pause();
+    if (this.backgroundMusic) {
+      this.backgroundMusic.pause();
+    }
+    if (this.backgroundMusic2) {
+      this.backgroundMusic2.pause();
     }
   }
 
   // Unmute all audio
   unmute() {
     this.isMuted = false;
-    if (this.currentMusic) {
-      this.currentMusic.play().catch(error => {
-        console.log('Audio playback prevented by browser: ', error);
-      });
+    // Resume background music if it was playing
+    if (this.backgroundMusic && !this.backgroundMusic.ended) {
+      this.resumeBackgroundMusic();
     }
   }
 
   // Set background music volume (0-1)
   setBackgroundVolume(volume) {
     this.bgMusicVolume = Math.max(0, Math.min(1, volume));
-    [this.mainMusic, this.earthMusic, this.spaceMusic].forEach(track => {
-      if (track) {
-        track.volume = this.bgMusicVolume;
+    if (this.backgroundMusic) {
+      this.backgroundMusic.volume = this.bgMusicVolume;
     }
-    });
+    if (this.backgroundMusic2) {
+      this.backgroundMusic2.volume = this.bgMusicVolume;
+    }
   }
 
   // Set sound effects volume (0-1)
