@@ -125,10 +125,6 @@ npm run deploy
 
 This will build the app and deploy it to the gh-pages branch.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgments
 
 - Question content developed for Grade 4 Earth Science and Astronomy curriculum
